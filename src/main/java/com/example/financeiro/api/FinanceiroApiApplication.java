@@ -1,4 +1,4 @@
-package com.example.demo.financeiro.api;
+package com.example.financeiro.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
