@@ -1,6 +1,5 @@
 package com.example.financeiro.api.resource;
 
-import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.example.financeiro.api.event.RecursoEvent;
 import com.example.financeiro.api.model.Categoria;
