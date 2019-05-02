@@ -26,6 +26,7 @@ import com.example.financeiro.api.event.RecursoEvent;
 import com.example.financeiro.api.exceptionhandler.FinanceiroExceptionHandler.Error;
 import com.example.financeiro.api.model.Lancamento;
 import com.example.financeiro.api.repository.LancamentoRepository;
+import com.example.financeiro.api.repository.filter.LancamentoFilter;
 import com.example.financeiro.api.service.LancamentoService;
 import com.example.financeiro.api.service.exception.PessoaInexistenteOuInativaException;
 
@@ -46,8 +47,8 @@ public class LancamentoResource {
 	private MessageSource messageSource;
 	
 	@GetMapping
-	public List<Lancamento> findAll() {
-		return lancamentoRepository.findAll();
+	public List<Lancamento> find(LancamentoFilter lancamentoFilter) {
+		return lancamentoRepository.filtrar(lancamentoFilter);
 	}
 	
 	@GetMapping("/{id}")
