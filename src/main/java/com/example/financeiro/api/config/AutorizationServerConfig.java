@@ -23,7 +23,7 @@ public class AutorizationServerConfig extends AuthorizationServerConfigurerAdapt
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.inMemory().withClient("angular").secret("{noop}angular").scopes("read", "write")
 		.authorizedGrantTypes("password", "refresh_token")
-		.accessTokenValiditySeconds(20).refreshTokenValiditySeconds(3600*24)
+		.accessTokenValiditySeconds(20000).refreshTokenValiditySeconds(3600*24)
 		.and()
 		.withClient("mobile").secret("{noop}mobile").scopes("read")
 		.authorizedGrantTypes("password", "refresh_token")
